@@ -19,3 +19,5 @@ For example, the following code would generate a 2x2 (square) grid of images.
   prompt: "The big dog"
 }
 ```
+
+N.B. The plugin will throw an error if `rows * columns != choices.length`.
