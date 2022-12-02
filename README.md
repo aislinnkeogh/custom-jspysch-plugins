@@ -1,8 +1,8 @@
-# README
+# How to use these plugins
 
 ## `html-button-response-grid`
 
-This plugin offers all the parameters from the built-in jsPsych [`html-button-response` plugin](https://www.jspsych.org/7.3/plugins/html-button-response/) as well as two new parameters: `rows` and `columns`.
+This plugin offers all the parameters from the built-in jsPsych `html-button-response` [plugin](https://www.jspsych.org/7.3/plugins/html-button-response/) as well as two new parameters: `rows` and `columns`.
 
 The buttons defined in `choices` are displayed in a grid with dimensions `rows` x `columns` as specified by the user.
 
