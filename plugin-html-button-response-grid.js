@@ -75,9 +75,10 @@ var jsPsychHtmlButtonResponseGrid = (function (jspsych) {
       },
   };
   /**
-   * html-button-response
-   * jsPsych plugin for displaying a stimulus and getting a button response
+   * html-button-response-grid
+   * jsPsych plugin for displaying a grid of stimuli and getting a button response
    * @author Josh de Leeuw
+   * Modified by Aislinn Keogh
    * @see {@link https://www.jspsych.org/plugins/jspsych-html-button-response/ html-button-response plugin documentation on jspsych.org}
    */
   class HtmlButtonResponseGridPlugin {
