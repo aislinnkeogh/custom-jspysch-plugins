@@ -21,3 +21,12 @@ For example, the following code would generate a 2x2 (square) grid of images.
 ```
 
 N.B. The plugin will throw an error if `rows * columns != choices.length`.
+
+## `multiple-slider`
+
+This plugin allows multiple slider inputs on one page in a slightly more aesthetically pleasing way than can be achieved with the built-in jsPsych survey plugins.
+
+The `questions` parameter takes a list, each element of which gives the options for a single slider. The parameters for each question are similar to those offered by the built-in jsPsych `html-slider-response` [plugin](https://www.jspsych.org/7.3/plugins/html-slider-response/), with two key changes:
+
+- `labels` no longer refers to the text that is displayed along the length of the slider, but rather to two labels that appear to the left of the slider: one above, and one below (I needed this for a specific use case, it can probably be ignored!)
+- To set labels that show at equidistant locations along the slider, use the `ticks` parameter
