@@ -149,9 +149,6 @@ var jsPsychMultipleSlider = (function(jspsych) {
       question_order.push(i);
     }
     if(trial.randomize_question_order){
-      // const shuffle = () => {
-      //   question_order = this.jsPsych.randomization.shuffle(question_order);
-      // }
       question_order = this.jsPsych.randomization.shuffle(question_order);
     }
 
@@ -167,41 +164,13 @@ var jsPsychMultipleSlider = (function(jspsych) {
       // add top left label
       if (question.labels.length > 0) {
       html += '<div style="font-size: 100%; font-weight: bold; position: absolute; left: calc(-15%)">' + question.labels[0] + '</div>'}
-      // html += '<div style="font-size: 100%; font-weight: bold; position: absolute; right: calc(-25%)">' + question.labels[1] + '</div>'
-
-      // Add top row ticks in ascending order
-      // for(var j=0; j < question.ticks.length; j++){
-      //   var label_width_perc = 95/(question.ticks.length-1);
-      //   var percent_of_range = 5 + j * (95/(question.ticks.length - 1));
-      //   var percent_dist_from_center = ((percent_of_range-50)/50)*100;
-      //   var offset = (percent_dist_from_center * half_thumb_width)/100;
-      //   html += '<div style="border: 1px solid transparent; position: absolute; '+
-      //   'left:calc('+percent_of_range+'% - ('+label_width_perc+'% / 2) - '+offset+'px); text-align: center; width: '+label_width_perc+'%;">';
-      //   html += '<span style="text-align: center; font-size: 100%;">'+question.ticks[j]+'</span>';
-      //   html += '</div>'
-      // }
-      // html += '<br>'
 
       // add sliders
-      // html += '<input style="width: 95%; float: right" type="range" class="jspsych-slider" value="'+(question.slider_start)+'" min="'+question.min+'" max="'+question.max+'" step="'+question.step+'" id="jspsych-html-slider-response-response-'+i+'" name="Q'+i+'" data-name="'+question.name+'"></input><br>';
       html += '<input style="width: 100%" type="range" class="jspsych-slider" value="'+(question.slider_start)+'" min="'+question.min+'" max="'+question.max+'" step="'+question.step+'" id="jspsych-html-slider-response-response-'+i+'" name="Q'+i+'" data-name="'+question.name+'"></input><br>';
 
       // add bottom left label
       if (question.labels.length > 0) {
       html += '<div style="font-size: 100%; font-weight: bold; position: absolute; left: calc(-15%)">' + question.labels[1] + '</div>'}
-
-      // Bottom row ticks - reverse the ticks list and then do the same thing as before
-      // var reversed_ticks = question.ticks.reverse()
-      // for(var j=0; j < question.ticks.length; j++){
-      //   var label_width_perc = 95/(question.ticks.length-1);
-      //   var percent_of_range = 5 + j * (95/(question.ticks.length - 1));
-      //   var percent_dist_from_center = ((percent_of_range-50)/50)*100;
-      //   var offset = (percent_dist_from_center * half_thumb_width)/100;
-      //   html += '<div style="border: 1px solid transparent; display: inline-block; position: absolute; '+
-      //   'left:calc('+percent_of_range+'% - ('+label_width_perc+'% / 2) - '+offset+'px); text-align: center; width: '+label_width_perc+'%;">';
-      //   html += '<span style="text-align: center; font-size: 80%;">'+reversed_ticks[j]+'</span>';
-      //   html += '</div>'
-      // }
 
       for(var j=0; j < question.ticks.length; j++){
         var label_width_perc = 100/(question.ticks.length-1);
@@ -266,9 +235,6 @@ var jsPsychMultipleSlider = (function(jspsych) {
       });
     }
 
-    // display_element.querySelector('#jspsych-multiple-slider-form').addEventListener('submit', function(e){
-    // Josh de Leeuw responded to my post in the support thread and told me to replace the line above with the line below but
-    // I still have the same error message as I did before
     display_element.querySelector('#jspsych-multiple-slider-form').addEventListener('submit', (e) => {
       e.preventDefault();
       // measure response time
